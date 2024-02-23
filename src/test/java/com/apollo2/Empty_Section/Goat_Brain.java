@@ -128,123 +128,295 @@ public class Goat_Brain {
 	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[6]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat_Brain4 is selected*******************");
 	           
+	           
 	            Section_status(wait);
-	            BackButton(wait);        
+	            driver.close(); 
+	            driver.switchTo().window(parentWindow);
+	           // BackButton(wait);        
 	    }
 	   
 	    @Test(priority=3)
 	    public void Wrong_GB16_CMC_Delete()throws InterruptedException {
+	    	
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
-	           
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
+//	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[7]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Wrong GB16(CMC)-Delete is selected*******************");
 	           
+	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+	           // BackButton(wait);
 	    }
 	   
 	    @Test(priority=4)
 	    public void GoatBrain_9()throws InterruptedException {
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[8]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat brain 9 is selected*******************");
 	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+	           
+	           // BackButton(wait);
 	    }
 	   
 	    @Test(priority=4)
 	    public void GoatBrain_22()throws InterruptedException {
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[9]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat brain 22 is selected*******************");
 	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+	            //BackButton(wait);
 	    }
 	   
 	    @Test(priority=5)
 	    public void GoatBrain_21()throws InterruptedException {
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[10]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat Brain 21 is selected*******************");
 	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+	            //BackButton(wait);
 	    }
 	   
 	    @Test(priority=6)
 	    public void GoatBrain_23()throws InterruptedException {
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[11]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat Brain 23 is selected*******************");
 	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+	            //BackButton(wait);
 	    }
 	   
 	    @Test(priority=7)
 	    public void GoatBrain_25()throws InterruptedException {
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[12]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat Brain 25 is selected*******************");
 	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+	           // BackButton(wait);
 	    }
 	   
 	    @Test(priority=8)
 	    public void GoatBrain_24()throws InterruptedException {
 	        WebDriverWait wait = new WebDriverWait(driver,60);
-	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
-	            Thread.sleep(2000);
-	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
-	            Thread.sleep(2000);
+//	          wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[4]/td[1]" ))).click();
+//	            Thread.sleep(2000);
+//	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[5]/td[2]" ))).click();
+//	            Thread.sleep(2000);
 	           
 	            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//tbody/tr[13]/td[3]" ))).click();
-	            Thread.sleep(5000);
+	            Thread.sleep(3000);
+	            
+	            String parentWindow = driver.getWindowHandle();
+		    	 try {
+			 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+			 		   viewericon.click();
+			 		    System.out.println("viewer icon is clicked successfully.");
+			 		    Thread.sleep(2000);
+			 		} catch (Exception e) {
+			 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+			 		}
+		    	 
+		    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+				  Set<String> allWindows = driver.getWindowHandles();
+			        for (String window : allWindows) {
+			            if (!window.equals(parentWindow)) {
+			                driver.switchTo().window(window);
+			                break;
+			            }
+			        }
 	            System.out.println("*******************Goat Brain 24 is selected*******************");
 	           
 	            Section_status(wait);
-	            BackButton(wait);
+	            driver.close();
+	            driver.switchTo().window(parentWindow);
+//	            BackButton(wait);
 	    }
 	   
 	    private void BackButton(WebDriverWait wait) {
